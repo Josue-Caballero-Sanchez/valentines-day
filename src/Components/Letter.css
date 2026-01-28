@@ -1,0 +1,66 @@
+.letter-container {
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.15);
+  padding: 1.5rem;
+  border-radius: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: rgba(240, 128, 128, 0.3) 1px solid;
+  max-width: 90%;
+  margin-top: -5rem;
+  background-color: white;
+  opacity: 0;
+  
+  animation: letterFadeIn 0.8s ease-out forwards;
+}
+
+.letter-container > p {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.heart-icon {
+  color: #e63946;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+  gap: 1rem;
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.button-container button {
+  padding: 0.5rem;
+  border: none;
+  border-radius: 2rem;
+  background-color: #e63946;
+  color: white;
+  cursor: pointer;
+  flex: 1;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.button-container p {
+  font-size: 1.8rem;
+}
+
+.button-container button:hover {
+  opacity: 0.85;
+}
+
+@keyframes letterFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

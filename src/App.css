@@ -1,5 +1,18 @@
 body {
-    background-color: #fff0f6;
+  min-height: 100vh;
+  margin: 0;
+
+  background:
+    radial-gradient(circle at top, rgba(255, 182, 193, 0.35), transparent 60%),
+    radial-gradient(circle at bottom, rgba(255, 105, 135, 0.25), transparent 55%),
+    linear-gradient(
+      180deg,
+      #fff0f6 0%,
+      #ffe4ec 40%,
+      #ffd6e3 100%
+    );
+
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
 }
 
 main {
@@ -12,4 +25,11 @@ main {
 
     font-size: 1.6rem;
     color: black;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 3rem;
+}
+
+.main-img {
+  max-width: 30rem;
 }

@@ -1,10 +1,9 @@
-import './Envelope.css'
+import './Envelope.css';
 import Icon from '@mdi/react';
 import { mdiEmailHeartOutline, mdiEmailOpenHeartOutline } from '@mdi/js';
-import heartOverHead from '../assets/heart_over_head-removebg.png';
 import { useState } from 'react';
 
-function Envelope() {
+function Envelope({ onOpened }) {
   const [isOpen, setIsOpen] = useState(false);
 
   function handleEnvelopeClick() {
@@ -15,8 +14,7 @@ function Envelope() {
 
   return (
     <>
-      <img className="main-img" src={heartOverHead} alt="" />
-      <div className={`envelope-container ${isOpen ? 'fly-away' : ''}`} onClick={handleEnvelopeClick}>
+      <div className={`envelope-container ${isOpen ? 'fly-away' : ''}`} onClick={handleEnvelopeClick} onAnimationEnd={isOpen ? onOpened : undefined}>
         <Icon 
           className="envelope" 
           path={isOpen ? mdiEmailOpenHeartOutline : mdiEmailHeartOutline} 
