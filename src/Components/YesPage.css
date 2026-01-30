@@ -1,0 +1,24 @@
+.main-container {
+	animation: yesPageFadeIn 1s ease-out forwards;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.main-container h2 {
+	margin-top: -6rem;
+	font-size: 2.5rem;
+}
+
+@keyframes yesPageFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
