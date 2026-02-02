@@ -11,10 +11,26 @@
   background-color: white;
   opacity: 0;
   
-  animation: letterFadeIn 0.8s ease-out forwards;
+  animation:
+    letterFadeIn 0.8s ease-out forwards,
+    letterPulse 1.75s ease-in-out infinite;
 }
 
-.letter-container > p {
+.letter-container-no-animation {
+  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.15);
+  padding: 1.5rem;
+  border-radius: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: rgba(240, 128, 128, 0.3) 1px solid;
+  max-width: 90%;
+  margin-top: -5rem;
+  background-color: white;
+}
+
+.letter-container > p,
+.letter-container-no-animation > p {
   font-size: 3rem;
   font-weight: bold;
   text-align: center;
@@ -62,5 +78,19 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes letterPulse {
+  0% {
+    box-shadow: 0 0 18px 4px rgba(230, 57, 70, 0.18);
+  }
+
+  40% {
+    box-shadow: 0 0 32px 12px rgba(230, 57, 70, 0.5);
+  }
+
+  100% {
+    box-shadow: 0 0 18px 4px rgba(230, 57, 70, 0.18);
   }
 }

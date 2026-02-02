@@ -1,6 +1,6 @@
 import './Envelope.css';
 import Icon from '@mdi/react';
-import { mdiEmailHeartOutline, mdiEmailOpenHeartOutline } from '@mdi/js';
+import { mdiEmailHeartOutline,  mdiEmailOpenOutline } from '@mdi/js';
 import { useState } from 'react';
 
 function Envelope({ onOpened }) {
@@ -17,7 +17,7 @@ function Envelope({ onOpened }) {
       <div className={`envelope-container ${isOpen ? 'fly-away' : ''}`} onClick={handleEnvelopeClick} onAnimationEnd={isOpen ? onOpened : undefined}>
         <Icon 
           className="envelope" 
-          path={isOpen ? mdiEmailOpenHeartOutline : mdiEmailHeartOutline} 
+          path={isOpen ? mdiEmailOpenOutline : mdiEmailHeartOutline} 
           size={25} 
         />
         <p className="envelope-text">To: my love</p>

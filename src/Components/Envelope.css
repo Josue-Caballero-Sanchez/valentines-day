@@ -5,7 +5,7 @@
   cursor: pointer;
   transition: transform 0.25s ease;
 
-  animation: envelopePulse 1s ease-in-out infinite;
+  animation: envelopePulse 0.75s ease-in-out infinite;
 }
 
 @keyframes envelopePulse {
