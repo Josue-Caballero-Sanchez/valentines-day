@@ -28,7 +28,7 @@ h2 > span {
   bottom: -20px;
   font-size: 3rem;
   opacity: 0;
-  animation: floatHeart 4s ease-in infinite;
+  animation: floatHeart 3s ease-in infinite;
 }
 
 .hearts span:nth-child(1) { left: 10%; animation-delay: 0s; }
@@ -50,7 +50,7 @@ h2 > span {
   }
 
   100% {
-    transform: translateY(-30rem) scale(1.25) rotate(10deg);
+    transform: translateY(-20rem) scale(1.25) rotate(45deg);
     opacity: 0;
   }
 }
